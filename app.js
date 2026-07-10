@@ -1,64 +1,103 @@
+function sendMessage() {
 
-function responder() {
+    let input = document.getElementById("user-input");
+    let message = input.value.toLowerCase();
 
-  let texto = document.getElementById("input").value.toLowerCase();
+    if (message.trim() === "") {
+        return;
+    }
 
-  let respuesta = "";
+    let chatBox = document.getElementById("chat-box");
 
-  if (texto.includes("dios")) {
+    chatBox.innerHTML += `
+    <div class="user-message">
+        👤 ${input.value}
+    </div>
+    `;
 
-    respuesta =
-    "📖 Dios es amor y nuestro Padre celestial.\n\n" +
-    "Versículo: 1 Juan 4:8 - Dios es amor.\n\n" +
-    "Reflexión: El amor de Dios nos acompaña aun en los momentos difíciles.";
+    let response = getBiblicalAnswer(message);
 
-  } 
-  
-  else if (texto.includes("miedo") || texto.includes("temor")) {
+    chatBox.innerHTML += `
+    <div class="bot-message">
+        📖 ${response}
+    </div>
+    `;
 
-    respuesta =
-    "📖 Dios nos fortalece cuando sentimos temor.\n\n" +
-    "Versículo: Isaías 41:10 - No temas, porque yo estoy contigo.\n\n" +
-    "Reflexión: La presencia de Dios nos da paz y confianza.";
+    input.value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
 
-  } 
-  
-  else if (texto.includes("fe")) {
 
-    respuesta =
-    "📖 La fe nos ayuda a confiar en Dios.\n\n" +
-    "Versículo: Hebreos 11:1 - La fe es la certeza de lo que se espera.\n\n" +
-    "Reflexión: Una fe firme nos permite caminar con esperanza.";
+function getBiblicalAnswer(question) {
 
-  }
 
-  else if (texto.includes("perdon")) {
+    if (question.includes("moises")) {
 
-    respuesta =
-    "📖 Dios nos llama a perdonar.\n\n" +
-    "Versículo: Efesios 4:32 - Perdonaos unos a otros.\n\n" +
-    "Reflexión: El perdón trae libertad al corazón.";
+        return `
+        <b>Moisés:</b><br>
+        Dios escogió a Moisés para liberar al pueblo de Israel de Egipto.
+        Aunque se sentía incapaz, el Señor le dio fuerza para cumplir su misión.<br><br>
 
-  }
+        📜 Éxodo 3:10<br>
+        "Ven, por tanto, ahora, y te enviaré a Faraón..."<br><br>
 
-  else if (texto.includes("jesus") || texto.includes("cristo")) {
+        ✨ Reflexión:<br>
+        Dios puede usar personas comunes para realizar grandes propósitos.
+        `;
+    }
 
-    respuesta =
-    "📖 Jesús es el camino, la verdad y la vida.\n\n" +
-    "Versículo: Juan 14:6 - Yo soy el camino, y la verdad, y la vida.\n\n" +
-    "Reflexión: Cristo nos muestra el amor y la salvación de Dios.";
 
-  }
+    if (question.includes("jesus") || question.includes("cristo")) {
 
-  else {
+        return `
+        <b>Jesucristo:</b><br>
+        Jesús vino al mundo para enseñarnos el amor de Dios,
+        salvarnos y mostrarnos el camino hacia la vida eterna.<br><br>
 
-    respuesta =
-    "📖 Gracias por tu pregunta.\n\n" +
-    "Versículo: Jeremías 33:3 - Clama a mí, y yo te responderé.\n\n" +
-    "Reflexión: Busca a Dios con un corazón sincero y Él te guiará.";
+        📜 Juan 14:6<br>
+        "Yo soy el camino, y la verdad, y la vida..."<br><br>
 
-  }
+        ✨ Reflexión:<br>
+        Al acercarnos a Cristo encontramos esperanza y paz.
+        `;
+    }
 
-  document.getElementById("respuesta").innerText = respuesta;
 
+    if (question.includes("fe")) {
+
+        return `
+        <b>La fe:</b><br>
+        La fe es confiar en Dios aun cuando no vemos todas las respuestas.<br><br>
+
+        📜 Hebreos 11:1<br>
+        "Es, pues, la fe la certeza de lo que se espera..."<br><br>
+
+        ✨ Reflexión:<br>
+        La fe crece cuando oramos, estudiamos las Escrituras y seguimos a Dios.
+        `;
+    }
+
+
+    if (question.includes("perdon")) {
+
+        return `
+        <b>El perdón:</b><br>
+        Jesucristo enseñó que debemos perdonar a los demás
+        como Dios nos perdona a nosotros.<br><br>
+
+        📜 Mateo 6:14<br>
+        "Porque si perdonáis a los hombres sus ofensas,
+        os perdonará también a vosotros vuestro Padre celestial."<br><br>
+
+        ✨ Reflexión:<br>
+        El perdón trae paz al corazón.
+        `;
+    }
+
+
+    return `
+    🙏 Gracias por tu pregunta.<br><br>
+    Todavía estoy aprendiendo más historias bíblicas.
+    Intenta preguntar sobre Moisés, Jesús, la fe o el perdón.
+    `;
 }
