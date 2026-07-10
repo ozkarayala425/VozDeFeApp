@@ -71,3 +71,27 @@ footer {
     margin-top: 20px;
     font-weight: bold;
 }
+/* ===== MENÚ ===== */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.menu button {
+    background: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu button:hover {
+    background: #0d47a1;
+}
