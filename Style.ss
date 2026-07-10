@@ -1,97 +1,211 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    margin: 0;
-    text-align: center;
+* {
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+    color: #222;
+}
+
+
+/* ENCABEZADO */
+
 header {
-    background: #1b4d89;
+    background: #123b6d;
     color: white;
-    padding: 20px;
+    text-align: center;
+    padding: 25px 15px;
 }
 
 header h1 {
     margin: 0;
+    font-size: 32px;
 }
 
-.chat-container {
-    width: 90%;
-    max-width: 600px;
-    margin: 20px auto;
-    background: white;
-    border-radius: 15px;
-    padding: 15px;
-    box-shadow: 0 0 10px #ccc;
+header p {
+    font-size: 18px;
 }
 
-#chat-box {
-    height: 400px;
-    overflow-y: auto;
-    text-align: left;
-    padding: 10px;
-}
 
-.bot-message,
-.user-message {
-    padding: 12px;
-    margin: 10px;
-    border-radius: 10px;
-}
+/* BOTÓN MENÚ */
 
-.bot-message {
-    background: #e8f1ff;
-}
-
-.user-message {
-    background: #d4f8d4;
-}
-
-.input-area {
-    display: flex;
-    gap: 10px;
-}
-
-input {
-    flex: 1;
-    padding: 12px;
-    font-size: 16px;
-}
-
-button {
-    padding: 12px 20px;
-    background: #1b4d89;
+#menu-btn {
+    background: #d4af37;
     color: white;
     border: none;
-    border-radius: 8px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
     cursor: pointer;
 }
 
-footer {
-    margin-top: 20px;
-    font-weight: bold;
-}
-/* ===== MENÚ ===== */
 
-.menu {
+/* MENÚ */
+
+#menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    padding: 15px;
+    background: white;
+}
+
+
+#menu button {
+    background: #123b6d;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* SECCIONES */
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 15px;
+}
+
+
+section {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+
+h2 {
+    color: #123b6d;
+}
+
+
+/* CHAT */
+
+#chat-box {
+    height: 350px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background: #eef4ff;
+}
+
+
+.bot-message,
+.user-message {
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 12px;
+}
+
+
+.bot-message {
+    background: white;
+}
+
+
+.user-message {
+    background: #d9f7d9;
+    text-align: right;
+}
+
+
+.chat-input {
+    display: flex;
+    gap: 10px;
     margin-top: 15px;
 }
 
-.menu button {
-    background: #1565c0;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 15px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: 0.3s;
+
+.chat-input input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
-.menu button:hover {
-    background: #0d47a1;
+
+.chat-input button {
+    background: #123b6d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+
+/* TARJETAS */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+    gap: 15px;
+}
+
+
+.tarjetas button {
+    padding: 20px;
+    background: #e8f0ff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+
+/* BIBLIOTECA */
+
+.contenido-biblico {
+    display: grid;
+    gap: 15px;
+}
+
+
+.tema {
+    background: #f5f8ff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+
+/* CELULARES */
+
+@media(max-width:600px){
+
+header h1 {
+    font-size: 25px;
+}
+
+#menu {
+    flex-direction: column;
+}
+
+#menu button {
+    width: 100%;
+}
+
+.chat-input {
+    flex-direction: column;
+}
+
+.chat-input button {
+    width: 100%;
+}
+
 }
