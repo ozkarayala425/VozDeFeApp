@@ -1,7 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,55 +12,92 @@
 
 </head>
 
+
 <body>
 
-
 <header>
+
     <h1>📖 VozDeFeAAP</h1>
+
     <p>Chat Bíblico de Fe y Esperanza</p>
 
-    <nav class="menu">
-        <button onclick="mostrarSeccion('inicio')">🏠 Inicio</button>
-        <button onclick="mostrarSeccion('chat')">💬 Chat Bíblico</button>
-        <button onclick="mostrarSeccion('historias')">📚 Historias Bíblicas</button>
-        <button onclick="mostrarSeccion('reflexion')">✨ Reflexión del Día</button>
-        <button onclick="mostrarSeccion('versiculo')">📖 Versículo del Día</button>
-        <button onclick="mostrarSeccion('acerca')">ℹ️ Acerca</button>
-    </nav>
+    <button id="menu-btn">
+        ☰ Menú
+    </button>
 
 </header>
 
-<div class="chat-container">
 
-    <div id="chat-box">
-        <div class="bot-message">
-            🙏 Bienvenido a VozDeFeAAP.<br><br>
-            Puedes preguntarme sobre historias de la Biblia,
-            personajes bíblicos, versículos y enseñanzas de Jesucristo.
-        </div>
-    </div>
+<nav id="menu">
+
+    <button>🏠 Inicio</button>
+
+    <button>💬 Chat Bíblico</button>
+
+    <button>📚 Historias Bíblicas</button>
+
+    <button>📖 Versículos</button>
+
+    <button>✨ Reflexiones</button>
+
+    <button>🙏 Oraciones</button>
+
+</nav>
 
 
-    <div class="input-area">
-        <input 
-        type="text" 
-        id="user-input" 
-        placeholder="Escribe tu pregunta bíblica...">
+<main>
 
-        <button onclick="sendMessage()">
-            Enviar
-        </button>
-    </div>
 
-</div>
+<section class="bienvenida">
+
+<h2>Bienvenido a VozDeFeAAP</h2>
+
+<p>
+Un lugar para estudiar la Biblia,
+encontrar inspiración y fortalecer tu fe.
+</p>
+
+</section>
+
+
+<section class="versiculo">
+
+<h2>📖 Versículo del Día</h2>
+
+<p id="versiculo-dia">
+"Cercano está Jehová a todos los que le invocan."
+<br>
+Salmos 145:18
+</p>
+
+</section>
+
+
+<section class="reflexion">
+
+<h2>✨ Reflexión del Día</h2>
+
+<p>
+Dios conoce tu camino. Cada día es una oportunidad
+para acercarte más a Él y crecer espiritualmente.
+</p>
+
+</section>
+
+
+</main>
 
 
 <footer>
-    𓂀 OSCAR AYALA
+
+𓂀 OSCAR AYALA
+
 </footer>
 
 
 <script src="app.js"></script>
 
+
 </body>
+
 </html>
