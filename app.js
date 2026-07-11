@@ -15,12 +15,9 @@ if (menuBtn && menu) {
 
 
 // CHAT BÍBLICO
-const enviarBtn = document.getElementById("enviar");
-const pregunta = document.getElementById("pregunta");
-const respuesta = document.getElementById("respuesta");
-
-if (enviarBtn && pregunta && respuesta) {
-
+const enviarBtn = document.getElementById("send-btn");
+const pregunta = document.getElementById("user-input");
+const respuesta = document.getElementById("chat-box");
     enviarBtn.addEventListener("click", () => {
 
         const texto = pregunta.value.toLowerCase();
