@@ -172,29 +172,47 @@ if(question.includes("fe")){
 
 return `
 
-🙏 <b>La Fe</b><br><br>
+🙏 Gracias por tu pregunta.
 
-La fe es confiar en Dios aun cuando no vemos
-todas las respuestas.
+Todavía estoy creciendo en conocimiento bíblico.
 
-<br><br>
+Puedes preguntar sobre:
 
-📜 <b>Hebreos 11:1</b><br>
-
-"Es, pues, la fe la certeza de lo que se espera..."
-
-<br><br>
-
-✨ <b>Reflexión:</b><br>
-
-La fe crece cuando buscamos a Dios diariamente.
+📖 Moisés<br>
+✝️ Jesús<br>
+🌈 Noé<br>
+🙏 Fe<br>
+❤️ Perdón
 
 `;
 
 }
 
 
+// MENÚ DE SECCIONES
 
+function mostrarSeccion(seccion){
+
+    const elemento = document.getElementById(seccion);
+
+    if(elemento){
+
+        elemento.scrollIntoView({
+            behavior:"smooth"
+        });
+
+    } else {
+
+        alert("Esta sección estará disponible próximamente.");
+
+    }
+
+}
+
+
+// CONFIRMACIÓN
+
+console.log("VozDeFeApp funcionando");
 
 if(question.includes("perdon")){
 
