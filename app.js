@@ -1,4 +1,4 @@
-// ===============================
+the// ===============================
 // VOZDEFEAAP - APP.JS
 // ===============================
 
@@ -239,10 +239,22 @@ Puedes preguntar sobre:
 🙏 Fe<br>
 ❤️ Perdón
 
-`;
+function mostrarSeccion(seccion){
 
-}function mostrarSeccion(seccion){
+    const elemento = document.getElementById(seccion);
 
-    alert("Próximamente: " + seccion);
+    if(elemento){
+
+        elemento.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    } else {
+
+        alert("Esta sección estará disponible próximamente.");
+
+    }
+
+}
 
 }console.log("VozDeFeAAP funcionando");
