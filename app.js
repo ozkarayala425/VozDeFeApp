@@ -241,4 +241,8 @@ Puedes preguntar sobre:
 
 `;
 
+}function mostrarSeccion(seccion){
+
+    alert("Próximamente: " + seccion);
+
 }
