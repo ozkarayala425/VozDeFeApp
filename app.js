@@ -170,9 +170,83 @@ La obediencia a Dios trae bendiciones.
 
 if(question.includes("fe")){
 
+if(question.includes("dios") || question.includes("creador")){
+
 return `
 
-🙏 Gracias por tu pregunta.
+🙏 <b>Dios</b><br><br>
+
+Dios es el Creador de los cielos y la tierra. Él es eterno,
+amoroso y desea tener una relación con nosotros.
+
+<br><br>
+
+📜 <b>Génesis 1:1</b><br>
+
+"En el principio creó Dios los cielos y la tierra."
+
+<br><br>
+
+✨ <b>Comentario bíblico:</b><br>
+
+Reconocer a Dios como nuestro Creador nos ayuda a vivir
+con propósito y confianza.
+
+`;
+
+}
+
+
+if(question.includes("oracion") || question.includes("orar")){
+
+return `
+
+🙏 <b>La Oración</b><br><br>
+
+La oración es una conversación con Dios. Por medio de ella
+expresamos nuestra gratitud, necesidades y buscamos su guía.
+
+<br><br>
+
+📜 <b>Filipenses 4:6</b><br>
+
+"Por nada estéis afanosos, sino sean conocidas vuestras peticiones delante de Dios."
+
+<br><br>
+
+✨ <b>Comentario bíblico:</b><br>
+
+Dios escucha a quienes se acercan a Él con un corazón sincero.
+
+`;
+
+}
+
+
+if(question.includes("biblia") || question.includes("palabra de dios")){
+
+return `
+
+📖 <b>La Biblia</b><br><br>
+
+La Biblia es la Palabra de Dios y contiene enseñanzas para
+guiar nuestra vida.
+
+<br><br>
+
+📜 <b>2 Timoteo 3:16</b><br>
+
+"Toda la Escritura es inspirada por Dios..."
+
+<br><br>
+
+✨ <b>Comentario bíblico:</b><br>
+
+Leer la Biblia fortalece nuestra fe y nos acerca más a Dios.
+
+`;
+
+}
 
 Todavía estoy creciendo en conocimiento bíblico.
 
