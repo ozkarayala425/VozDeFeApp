@@ -1,230 +1,100 @@
+/* ==========================
+   VOZDEFEAPP - STYLE.CSS
+========================== */
+
 * {
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f7fb;
     margin: 0;
-    color: #222;
+    background: linear-gradient(135deg, #0b1f3a, #1e40af);
+    color: white;
 }
 
 
 /* ENCABEZADO */
 
 header {
-    background: #123b6d;
-    color: white;
     text-align: center;
-    padding: 25px 15px;
+    padding: 30px 15px;
+    background: rgba(0,0,0,0.25);
 }
 
 header h1 {
-    margin: 0;
-    font-size: 32px;
-}
-
-header p {
-    font-size: 18px;
-}
-
-
-/* BOTÓN MENÚ */
-
-#menu-btn {
-    background: #d4af37;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
+    font-size: 34px;
+    margin-bottom: 10px;
 }
 
 
 /* MENÚ */
 
-#menu {
+nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
     padding: 15px;
-    background: white;
 }
 
 
-#menu button {
-    background: #123b6d;
-    color: white;
+/* BOTONES */
+
+button {
+    background: #d4af37;
+    color: #111;
     border: none;
-    padding: 12px;
-    border-radius: 10px;
+    padding: 12px 18px;
+    margin: 6px;
+    border-radius: 12px;
+    font-size: 16px;
     cursor: pointer;
 }
 
 
 /* SECCIONES */
 
-main {
-    max-width: 900px;
-    margin: auto;
-    padding: 15px;
-}
-
-
 section {
-    background: white;
-    margin: 20px 0;
+    margin: 20px;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 3px 10px #ddd;
-}
-
-
-h2 {
-    color: #123b6d;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.12);
 }
 
 
 /* CHAT */
-<section id="chat" class="chat">
 
-<h2>💬 Chat Bíblico</h2>
-
-<div id="chat-box">
-
-<div class="bot-message">
-
-🙏 Bienvenido al Chat Bíblico.
-
-<br><br>
-
-Puedes preguntar sobre:
-<br><br>
-
-📖 Historias de la Biblia<br>
-👥 Personajes bíblicos<br>
-✨ Enseñanzas de Jesús<br>
-📜 Versículos y reflexiones
-
-</div>
-
-</div>
+#chat-box {
+    background: white;
+    color: black;
+    min-height: 120px;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
 
 
-<input 
-id="user-input" 
-type="text" 
-placeholder="Escribe tu pregunta bíblica...">
-
-
-<button id="send-btn">
-📖 Enviar
-</button>
-
-
-<section class="accesos">
-
-<h2>📚 Explora la Biblia</h2>
-
-<div class="tarjetas">
-
-<button>
-📖 Historias Bíblicas
-</button>
-
-<button>
-👥 Personajes Bíblicos
-</button>
-
-<button>
-📜 Versículos por Tema
-</button>
-
-<button>
-🙏 Oraciones
-</button>
-
-<button>
-✨ Reflexiones
-</button>
-
-<button>
-🔍 Buscar en la Biblia
-</button>
-
-</div>
-
-</section>
-
-</section>
+#user-input {
+    width: 80%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+}
 
 
 /* TARJETAS */
 
 .tarjetas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
-    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
-.tarjetas button {
-    padding: 20px;
-    background: #e8f0ff;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-}
-
-
-/* BIBLIOTECA */
-
-.contenido-biblico {
-    display: grid;
-    gap: 15px;
-}
-
-
-.tema {
-    background: #f5f8ff;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-
-/* PIE DE PÁGINA */
+/* PIE */
 
 footer {
     text-align: center;
-    padding: 20px;
-    font-weight: bold;
-}
-
-
-/* CELULARES */
-
-@media(max-width:600px){
-
-header h1 {
-    font-size: 25px;
-}
-
-#menu {
-    flex-direction: column;
-}
-
-#menu button {
-    width: 100%;
-}
-
-.chat-input {
-    flex-direction: column;
-}
-
-.chat-input button {
-    width: 100%;
-}
-
+    padding: 25px;
+    font-size: 18px;
 }
