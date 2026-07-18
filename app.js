@@ -15,9 +15,13 @@ if (menuBtn && menu) {
 
 
 // CHAT BÍBLICO
+
 const enviarBtn = document.getElementById("send-btn");
 const pregunta = document.getElementById("user-input");
 const respuesta = document.getElementById("chat-box");
+
+if (enviarBtn && pregunta && respuesta) {
+
     enviarBtn.addEventListener("click", () => {
 
         const texto = pregunta.value.toLowerCase();
@@ -52,7 +56,6 @@ const respuesta = document.getElementById("chat-box");
     });
 
 }
-
 
 // NAVEGACIÓN
 function mostrarSeccion(seccion){
